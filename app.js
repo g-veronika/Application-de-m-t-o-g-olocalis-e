@@ -1,4 +1,19 @@
-let villeChoisie = "saint-saulve";
+let villeChoisie;
+
+if("geolocation" in navigator) {
+
+    navigator.geolocation.watchPosition((position)=> {
+        console.log(position.coords.latitude)
+        console.log(position.coords.longitude)
+
+    });
+
+} else {
+    villeChoisie = "Paris";
+    recevoirTemperature(villeChoisie);
+};
+
+
 recevoirTemperature(villeChoisie);
 
 let changerDeVille = document.querySelector('#changer');
