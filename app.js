@@ -6,6 +6,7 @@ if("geolocation" in navigator) {
 
         const url = 'https://api.openweathermap.org/data/2.5/weather?lon=' + position.coords.longitude + '&lat=' + position.coords.latitude + '&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric';
         console.log(url)
+
         let requete = new XMLHttpRequest(); // Nous créons un objet qui nous permettra de faire des requêtes
         requete.open('GET', url); // Nous récupérons juste des données
         requete.responseType = 'json'; // Nous attendons du JSON
@@ -29,16 +30,17 @@ if("geolocation" in navigator) {
           }
         }
         
+    }, erreur, options);
 
-    }, erreur);
+    var options = {
+        enableHighAccuracy: true
+    }
 
 } else {
     villeChoisie = "Paris";
     recevoirTemperature(villeChoisie);
 };
 
-
-recevoirTemperature(villeChoisie);
 
 let changerDeVille = document.querySelector('#changer');
 changerDeVille.addEventListener('click', () => {
@@ -51,8 +53,8 @@ function erreur() {
     recevoirTemperature(villeChoisie);
 }
 
-function recevoirTemperature(ville) {
-    const url = 'https://api.openweathermap.org/data/2.5/weather?lon=' + position.coords.longitude + '&lat=' + position.coords.latitude + '&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric';
+function recevoirTemperature(position) {
+    const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=dc8c9152e8adaad0ec8bf635818c0d42&units=metric';
         console.log(url)
         let requete = new XMLHttpRequest(); // Nous créons un objet qui nous permettra de faire des requêtes
         requete.open('GET', url); // Nous récupérons juste des données
