@@ -1,0 +1,20 @@
+{
+  "name": "Application-de-m-t-o-g-olocalis-e",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/g-veronika/Application-de-m-t-o-g-olocalis-e.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/g-veronika/Application-de-m-t-o-g-olocalis-e/issues"
+  },
+  "homepage": "https://github.com/g-veronika/Application-de-m-t-o-g-olocalis-e#readme",
+  "description": ""
+}
